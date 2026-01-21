@@ -1,0 +1,56 @@
+@use "./_variables" as *
+
+.testimonialsBlock
+  padding: 70px 0 120px
+  h2
+    padding-bottom: 70px
+  @include maxPhablet
+    padding-bottom: 30px
+  .testimonial-block-two
+    min-height: 330px
+    display: flex
+    .inner-box
+      width: 95%
+      margin: 0 auto
+      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.07)
+      border: 1px solid var(--primary-color-15)
+      background-color: var(--whiteghost)
+      border-radius: 8px
+      padding: 30px
+      @include maxPhablet
+        padding: 10px 20px
+      .author-box
+        padding-bottom: 20px
+        margin-bottom: 0
+      h4
+        font-weight: 600
+      p
+        padding-bottom: 15px
+        @include maxMobile
+          font-size: .85rem
+      .designation
+        color: var(--primary-color)
+        font-size: 18px
+        font-weight: 600
+  .pattern-layer
+    top: unset
+    left: 0
+    height: 100%
+    width: 100%
+.swiper-pagination
+  position: relative!important
+  top: 0
+  left: 0
+  padding: 40px 0 0
+  .swiper-pagination-bullet
+    width: 16px
+    height: 16px
+    border-radius: 20px
+    &.swiper-pagination-bullet-active
+      background-color: var(--primary-color)
+
+
+.news-block-one 
+  .inner-box
+    @include maxMobile
+      padding-top: 50px

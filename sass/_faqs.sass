@@ -1,0 +1,85 @@
+@use './variables' as *
+
+.faqsByArea
+  background-color: var(--primary-color)
+  padding: 70px 0
+
+  .accordion
+    &-item
+      border: 0
+      border-radius: 0
+    &-body
+      padding: 0
+
+  .titleSeciton
+    margin: 0
+    padding: 0 0 60px
+    font-weight: bold  
+    color: var(--white)
+    @media (max-width: 480px)
+      padding: 0 0 30px
+      font-size: 28px  
+  &--accordion
+    display: block
+    width: 100%
+    max-width: 800px
+    margin: 0 auto
+  &--body
+    padding: 10px 0
+    p
+      color: var(--white)
+      font-size: 15px
+      line-height: 1.75
+      font-weight: 300
+      @media (max-width: 480px)
+        font-size: 14px
+    .category
+      color: var(--lightblue)
+      border: 1px solid var(--lightblue)
+      font-size: 12px
+      padding: 5px 10px
+      display: inline-block
+      margin-top: 15px
+  &--item
+    background: transparent
+    padding: 15px 0
+    border-bottom: 1px solid rgba(255,255,255,0.5)!important
+    &:last-child
+      margin-bottom: 0
+  &--btn
+    display: flex
+    align-items: flex-start
+    padding: 10px 0
+    width: 100%
+    border: 0
+    outline: 0!important
+    box-shadow: none!important
+    cursor: pointer
+    font-size: 20px
+    font-weight: 500
+    border-radius: 0
+    color: var(--white)
+    position: relative
+    &:after
+      --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e")
+      --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e")
+      margin-top: 5px
+    @media (max-width: 979px)
+      font-size: 16px
+    @media (max-width: 480px)
+      font-size: 15px
+    .category
+      display: block
+      color: var(--lightblue)
+      font-size: 14px
+      font-weight: 400
+      padding-top: 15px
+    &.collapsed
+      background-color: transparent
+      i
+        transform: rotate(180deg) 
+    &:not(.collapsed)
+      background-color: transparent
+      color: var(--white)
+      .category
+        display: none

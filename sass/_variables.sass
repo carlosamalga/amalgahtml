@@ -1,0 +1,290 @@
+:root
+  --primary-color: #006E75
+  --primary-color-15: #CFE2E6
+  --primary-color-55: rgba(0, 110, 117, .55)
+  --primary-color-hover: #2F959C
+  --secondary-color: #3EA2A9
+  --secondary-color-15: #E2F1F2
+  --lightblue: #BEFCFF
+  --aqua-transparent: rgba(1, 149, 158, .60)
+  --green: #33B300
+  --lightred: #FF383C
+  --lightpink: #FEF2F2
+  --strongpink: #E0115F
+  --whiteghost: #F4F7FA
+  --redghost: #F9989A
+  --greenghost: #6CC84B
+  --yellow: #FFC400
+  --black-color: #565656
+  --white: #ffffff
+  --gris: #f0f0f0
+  --border-input-color: #D1D5DB
+  --border-input-color-graygreen: #D9E9EA
+  --primary-font: "Poppins", sans-serif
+
+
+.color-primary
+  color: var(--primary-color)
+.color-black
+  color: var(--black-color)
+.bg-black
+  background-color: var(--black-color)
+
+.btn-danger
+  background-color: var(--primary-color)
+  border-color: var(--primary-color)
+
+.container
+  @media (min-width: 576px) and (max-width: 992px)
+    max-width: 95%
+
+// default form hubspot stlye
+.hs-form-required
+  color: var(--lightred)
+.hs-input,
+textarea
+  border: 1px solid var(--border-input-color)
+  border-radius: 2px
+  padding-left: 10px
+  width: 100%
+  outline: 0
+  &:not([type="checkbox"])
+    min-height: 30px
+
+textarea
+  width: 100%!important
+  max-width: 100%!important
+  min-height: 90px!important
+  max-height: 110px!important
+  padding-top: 5px
+
+.hs-error-msgs
+  list-style: none
+  padding-left: 0
+  padding: 5px 0 0
+  li
+    label
+      font-size: .7em!important
+      color: var(--lightred)
+      opacity: .75
+
+
+
+// Media queries
+$container-width: 1440px
+// 1440
+$desktop: $container-width
+$desktop-1280: 1280px
+$desktop-small: 1140px
+$tablet-landscape: 1024px
+$tablet-portrait: 992px
+$tablet: 768px
+$phablet: 740px
+$mobile: 568px
+$mobile-landscape: 480px
+$mobile-portrait: 420px
+
+// max desktopBig
+@mixin maxDesktopSize
+  @media ( max-width: $desktop)
+    @content
+// min desktopBig
+@mixin minDesktopSize
+  @media ( min-width: $desktop)
+    @content
+// min 1280
+@mixin minDesktop1280
+  @media ( min-width: $desktop-1280)
+    @content
+
+// min 1140
+@mixin minDesktopSmall
+  @media ( min-width: $desktop-small)
+    @content
+// max 1140
+@mixin maxDesktopSmall
+  @media ( max-width: $desktop-small )
+    @content
+// 1280 - desktop
+@mixin desktop1280ToBig
+  @media (min-width: $desktop-1280 ) and ( max-width: $desktop )
+    @content
+// 1140 - desktop
+@mixin desktopSmallTo1280
+  @media (min-width: $desktop-small ) and ( max-width: $desktop-1280 )
+    @content
+// 1140 - desktop
+@mixin desktopSmallToBig
+  @media (min-width: $desktop-small ) and ( max-width: $desktop )
+    @content
+// 1024 - 1280
+@mixin tabletLandscapeDesktop1280
+  @media (min-width: $tablet-landscape ) and ( max-width: $desktop-1280 )
+    @content
+// 1024 - 1140
+@mixin tabletLandscapeDesktop
+  @media (min-width: $tablet-landscape ) and ( max-width: $desktop-small )
+    @content
+// max 1024
+@mixin maxTabletLandscape
+  @media (max-width: $tablet-landscape )
+    @content
+// min 1024
+@mixin minTabletLandscape
+  @media (min-width: $tablet-landscape )
+    @content
+// 960 - 1280
+@mixin tabletPortraitTo1280
+  @media ( min-width: $tablet-portrait ) and ( max-width: $desktop-1280 )
+    @content
+// 960 - 1024
+@mixin tabletPortraitToTabletLandscape
+  @media ( min-width: $tablet-portrait ) and ( max-width: $tablet-landscape )
+    @content
+// 960 - 1140
+@mixin tabletPortraitToDesktopSmall
+  @media ( min-width: $tablet-portrait ) and ( max-width: $desktop-small )
+    @content
+// min 960
+@mixin minTabletPortrait
+  @media ( min-width: $tablet-portrait )
+    @content
+// max 960
+@mixin maxTabletPortrait
+  @media ( max-width: $tablet-portrait )
+    @content
+// min 740 - desktop
+@mixin phabletToDesktop
+  @media ( min-width: $phablet ) and ( max-width: $desktop )
+    @content
+// min 740 - 1280
+@mixin phabletToDesktop1280
+  @media ( min-width: $phablet ) and ( max-width: $desktop-1280 )
+    @content
+// min 740 - 1140
+@mixin phabletToDesktopSmall
+  @media ( min-width: $phablet ) and ( max-width: $desktop-small )
+    @content
+// min 740 - 960
+@mixin phabletToTablet
+  @media ( min-width: $phablet ) and ( max-width: $tablet-portrait )
+    @content
+// 568 - 960
+@mixin mobileToPortrait
+  @media ( min-width: $mobile ) and ( max-width: $tablet-portrait )
+    @content
+// 568 - 740
+@mixin mobileToPhablet
+  @media ( min-width: $mobile ) and ( max-width: $phablet )
+    @content
+// min 740
+@mixin minPhablet
+  @media ( min-width: $phablet )
+    @content
+// max 740
+@mixin maxPhablet
+  @media ( max-width: $phablet )
+    @content
+// max 768
+@mixin maxTablet
+  @media ( max-width: $tablet )
+    @content
+// min 768
+@mixin minTablet
+  @media ( min-width: $tablet )
+    @content
+// max 568
+@mixin maxMobile
+  @media ( max-width: $mobile )
+    @content
+// min 568
+@mixin minMobile
+  @media ( min-width: $mobile )
+    @content
+// 480 - 568
+@mixin mobileLandscapeToMobile
+  @media (min-width: $mobile-landscape) and (max-width: $mobile )
+    @content
+// max 480
+@mixin maxMobileLandscape
+  @media (max-width: $mobile-landscape)
+    @content
+// min 420 max 568
+@mixin mobilePortraitToMobile
+  @media (min-width: $mobile-portrait) and (max-width: $mobile)
+    @content
+// max 420
+@mixin maxMobilePortrait
+  @media (max-width: $mobile-portrait)
+    @content
+
+// Mixins
+@mixin flexTopLeft
+  display: flex
+  align-items: flex-start
+  justify-content: flex-start
+
+@mixin flexStrech
+  display: flex
+  align-items: stretch
+
+@mixin flexStart
+  display: flex
+  align-items: flex-start
+  justify-content: flex-start
+
+@mixin flexEnd
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+@mixin flexEndCenter
+  display: flex
+  align-items: flex-end
+  justify-content: center
+
+@mixin flexEndColumnReverse
+  display: flex
+  align-items: flex-end
+  justify-content: flex-end
+  flex-flow: column-reverse
+
+@mixin flexEndFull
+  display: flex
+  align-items: flex-end
+  justify-content: flex-end
+
+@mixin flexCenter
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin flexAround
+  display: flex
+  align-items: center
+  justify-content: space-around
+
+@mixin flexBetween
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+@mixin flexEvenly
+  display: flex
+  align-items: center
+  justify-content: space-evenly
+
+@mixin flexColumnSpaceBetween
+  display: flex
+  flex-flow: column
+  justify-content: space-between
+
+@mixin flexRowReverse
+  display: flex
+  flex-flow: row-reverse
+
+
+@mixin recursivePaddingHeight
+  padding-bottom: 70px
+  @media (max-width: 767px)
+    padding: 40px 0

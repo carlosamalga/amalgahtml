@@ -1,0 +1,35 @@
+.breadcrumbs
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  transform: translateY(-50px)
+  @media (max-width: 768px)
+    position: relative
+    transform: none
+    padding-top: 20px
+  &-links
+    display: flex
+    align-items: center
+    gap: 0 15px
+    @media (max-width: 768px)
+      justify-content: center
+      flex-wrap: wrap
+      gap: 10px      
+    li,
+    a,
+    span,
+    p
+      color: var(--white)
+      opacity: .85
+    p
+      &.currentPage
+        opacity: 1
+    a
+      text-decoration: none
+      display: flex
+      align-items: center
+      img
+        display: block
+        max-width: 100%
+        margin-right: 10px

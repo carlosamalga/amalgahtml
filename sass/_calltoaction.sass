@@ -1,0 +1,40 @@
+@use './variables' as *
+  
+.calltoaction
+  padding: 30px 0
+
+  .title-section
+    padding: 0
+
+  &-cta
+    border-radius: 15px
+    padding: 35px 20px
+
+  &-btns-grid
+    padding: 35px 0
+    @include flexCenter
+    flex-wrap: wrap
+    gap: 20px
+  
+  &-foot
+    p
+      text-align: center
+      font-size: 14px
+      margin: 15px 0
+      &:first-child
+        margin-top: 0
+      &:last-child
+        margin-bottom: 0
+
+
+  // themes
+  &.cta-primary-theme
+    .calltoaction-cta
+      background: linear-gradient(93.6deg, #006E75 35.02%, rgba(1, 110, 117, 0.7) 100%)
+    .title-section
+      h3, h2, p
+        color: var(--white)
+    .calltoaction-foot
+      p
+        color: var(--white)
+

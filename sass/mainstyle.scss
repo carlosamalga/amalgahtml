@@ -1,0 +1,129 @@
+@use 'fonts' as *;
+@use 'variables' as *;
+@use 'global/breadcrumbs.sass' as *;
+@use 'global/pill.sass' as *;
+@use 'global/title.sass' as *;
+@use '_block-and-cards.sass' as *;
+@use '_calltoaction.sass' as *;
+@use '_case-of-study.sass' as *;
+@use '_faqs.sass' as *;
+@use '_fonts.sass' as *;
+@use '_footer.sass' as *;
+@use '_hero-form.sass' as *;
+@use '_hero-style.sass' as *;
+@use '_section-howitworks.sass' as *;
+@use '_section-theproblem.sass' as *;
+@use '_services-block.sass' as *;
+@use '_testimonials.sass' as *;
+@use '_variables.sass' as *;
+@use '_why-amalga.sass' as *;
+
+
+// homepage
+@use 'homepage/_block-intro.sass' as *;
+
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+li,
+a,
+label,
+blockquote,
+pre,
+code,
+dt,
+dd,
+th,
+td,
+input,
+textarea,
+button {
+  font-family: var(--primary-font);
+  margin: 0;
+  font-weight: 400;
+}
+
+h1,
+h2{
+  font-weight: 700;
+}
+h3,
+h4,
+h5,
+h6{
+  font-weight: 600;
+}
+ul{
+  padding-left: 0;
+  li{
+    list-style: none;
+  }
+}
+
+span{
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 10px;
+  width: 100%;
+  padding: 12px 6px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  span{
+    font-size: 14px;
+    font-weight: 600;    
+    color: inherit;
+  }
+  &.btn-lg{
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+  }
+  &.btn-xlg{
+    width: 100%;
+    max-width: 375px;
+    height: 50px;
+    span{
+      @media (min-width: 979px){
+        font-size: 18px;
+      }
+    }
+  }
+  &.btn-primary{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+  }
+  &.btn-lightblue{
+    background-color: var(--lightblue);
+    border-color: var(--lightblue);
+    color: var(--primary-color);
+  }
+  &.btn-lightblue-outline{
+    background-color: transparent;
+    border-color: var(--lightblue);
+    color: var(--lightblue);
+  }
+}
+
+.color-red{
+  color: var(--primary-color);
+}
+
+.bg-red{
+  background-color: var(--primary-color);
+}

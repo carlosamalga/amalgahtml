@@ -1,0 +1,52 @@
+@use './variables' as *
+
+.section-howitworks
+  padding: 0 0 70px
+  @include recursivePaddingHeight
+  &-grid
+    display: flex
+    justify-content: center
+    gap: 15px
+    @include maxPhablet
+      flex-wrap: wrap
+      align-items: flex-start
+  &-item
+    width: 100%
+    max-width: 205px
+    @include maxPhablet
+      width: 45%
+      max-width: unset
+    @include maxMobilePortrait
+      width: 60%
+      margin-bottom: 20px
+  &-space
+    display: flex
+    justify-content: center
+    align-items: center
+    @include maxPhablet
+      display: none
+    &:last-child
+      display: none
+  &-num
+    @include flexCenter
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background: linear-gradient(180deg, var(--primary-color) 35%, var(--primary-color-55) 100%)    
+    text-align: center
+    margin: 0 auto
+    span
+      color: var(--white)
+      font-size: 20px
+      font-weight: bold
+  &-info
+    span
+      display: block
+      text-align: center
+    .item-title
+      color: var(--primary-color)
+      font-weight: 600
+      font-size: 18px
+      padding: 10px 0
+    .item-desc
+      font-size: 14px

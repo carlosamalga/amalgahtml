@@ -1,0 +1,29 @@
+.title-section
+  padding: 70px 0
+  @media (max-width: 767px)
+    padding: 40px 0
+  &-copy
+    text-align: center
+    width: 100%
+    max-width: 850px
+    margin: 0 auto
+    h3
+      font-size: 18px
+      text-transform: uppercase
+    h2
+      margin: 10px 0
+      font-weight: 600
+  
+  // themes
+  &.maintitle-color-primary
+    h2
+      color: var(--primary-color)
+  &.titles-color-primary
+    h2, h3
+      color: var(--primary-color)
+  &.all-color-primary
+    h2, h3, p
+      color: var(--primary-color)    
+  &.all-white
+    h2, h3, p
+      color: var(--white)    

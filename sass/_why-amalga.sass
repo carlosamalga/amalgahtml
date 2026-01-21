@@ -1,0 +1,86 @@
+@use './variables' as *
+
+.why-amalga
+  background-color: var(--primary-color)
+  padding: 50px 0
+  @include maxTablet
+    padding: 50px 0 20px
+  &-grid
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 25px 0
+    gap: 40px
+    &.reverse
+      flex-flow: row-reverse
+    @include maxTablet
+      display: block
+      padding: 0
+  &-picture
+    width: 100%
+    max-width: 630px
+    position: relative
+    img
+      display: block
+      max-width: 100%
+      position: relative
+      height: auto
+  &-info
+    width: 100%
+    max-width: 550px
+    @include maxTablet
+      padding: 30px 0
+      text-align: center
+      margin: 0 auto
+    h2, p
+      color: var(--white)
+    h2
+      font-weight: 600
+      padding-bottom: 5px
+    p
+      font-size: 20px
+      font-weight: 300
+      line-height: 1.5
+      margin: 25px 0
+      @include phabletToDesktop1280
+        margin: 10px 0
+        font-size: 15px
+      @include maxTablet
+        margin: 15px 0
+        font-size: 15px
+      &:last-child
+        margin-bottom: 0
+  &-stat
+    padding: 25px 0
+    border-bottom: 1px solid var(--secondary-color)
+    &:last-child
+      border-bottom: 0
+    @include flexCenter
+    @include maxTablet
+      display: block
+    span
+      display: block
+      color: white
+      font-size: 20px
+      font-weight: 300
+      width: 100%
+      line-height: 1.5
+      @include phabletToDesktop1280
+        font-size: 15px      
+      @include maxTablet
+        font-size: 15px
+      &.total
+        font-size: 60px
+        font-weight: bold
+        max-width: 200px
+        line-height: 1
+        text-align: center
+        @include phabletToDesktop1280
+          font-size: 45px
+        @include maxTablet
+          margin: 0 auto 10px
+          font-size: 40px
+      &.result
+        max-width: 320px
+        @include maxTablet
+          margin: 0 auto

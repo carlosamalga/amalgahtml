@@ -1,0 +1,12 @@
+@use './variables' as *
+
+.services-block
+  background-color: var(--secondary-color)
+  @include recursivePaddingHeight
+  &-grid
+    @include flexCenter
+    flex-wrap: wrap
+    gap: 15px
+    @include maxTablet
+      align-items: unset
+  

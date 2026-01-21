@@ -1,0 +1,93 @@
+@use './variables' as *
+
+.block-and-cards
+  padding: 0 0 100px
+  @media (max-width: 767px)
+    padding: 0 0 70px
+  &-grid
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    gap: 15px
+  
+  &-item
+    width: 100%
+    max-width: 300px
+    background-color: var(--primary-color)
+    padding: 30px
+    border-radius: 10px
+    &.theme-long-card
+      width: 100%
+      max-width: 1080px
+      margin-left: auto
+      margin-right: auto    
+    @media (min-width: 992px) and (max-width: 1400px)
+      width: 45%
+      max-width: unset
+
+    &.simple-item
+      @include flexCenter
+      gap: 25px
+      padding: 23px 30px
+      max-height: 100px
+      max-width: 300px
+      @include maxTablet
+        width: 45%
+        padding: 20px
+        display: block
+        max-height: unset
+      .block-and-cards-icon
+        margin: 0
+      .block-and-cards-copys 
+        width: calc(90% - 60px)
+        @include maxTablet
+          width: 100%
+          padding: 20px 0 0
+        .card-title
+          margin: 0
+          font-weight: 500
+          @include maxTablet
+            font-size: 14px
+    &.white-card
+      background-color: var(--white)
+      .block-and-cards-icon
+        background-color: var(--secondary-color-15)
+      .card-title
+        color: var(--black-color)
+      
+
+  &-icon
+    width: 50px
+    height: 50px
+    background-color: var(--primary-color-hover)
+    @include flexCenter
+    border-radius: 5px
+    margin-bottom: 25px
+  &-copys
+    color: white
+    .card-title
+      font-size: 15px
+      font-weight: 600
+      margin-bottom: 10px
+    .card-description
+      font-size: 15px
+      font-weight: 300
+      line-height: 2
+  
+  &-lastcopy
+    width: 100%
+    max-width: 790px
+    margin: 50px auto 0
+    color: var(--primary-color)
+    a
+      color: var(--primary-color-55)
+
+  // thems
+  &.theme-lightblue-center
+    .block-and-cards-icon
+      margin-left: auto
+      margin-right: auto
+    .block-and-cards-copys 
+      text-align: center
+      .card-title
+        color: var(--lightblue)

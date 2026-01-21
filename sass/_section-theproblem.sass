@@ -1,0 +1,89 @@
+@use './variables' as *
+
+.section-theproblem
+  background-color: var(--secondary-color)
+  padding: 60px 0
+  @include maxTablet
+    padding: 40px 0
+  &-head
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    @include maxTablet
+      display: block
+    h2, h3, p
+      color: white
+  &-titles
+    width: 100%
+    max-width: 530px
+    padding-bottom: 5px
+    @include maxTablet
+      padding-bottom: 15px
+    .intro
+      h3
+        padding: 20px 0px 10px 10px
+    h2
+      font-weight: 600
+    h3
+      font-size: 20px
+      font-weight: 500
+      text-transform: uppercase
+      letter-spacing: 0.06em
+  &-description
+    width: 100%
+    max-width: 690px
+    p
+      font-size: 15px
+      font-weight: 600
+      font-size: 15px
+      line-height: 26px
+      color: var(--white)
+  &-items
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    padding: 50px 0
+    gap: 15px
+    @include maxTablet
+      padding: 30px 0
+      justify-content: center
+  &-card
+    width: 32%
+    max-width: 405px
+    background-color: var(--white)
+    padding: 20px
+    border: 1px solid var(--border-input-color-graygreen)
+    border-radius: 5px
+    @include phabletToTablet
+      width: 45%
+    @include maxPhablet
+      width: 100%
+    .card-title
+      color: var(--primary-color)
+      font-weight: 600
+      font-size: 20px
+      padding-bottom: 10px
+    .card-description
+      font-size: 15px
+      font-weight: 300
+  &-warning
+    width: 100%
+    max-width: 1100px
+    padding: 15px
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: var(--lightpink)
+    border: 1px solid var(--strongpink)
+    border-radius: 5px
+    gap: 10px
+    align-items: flex-start
+    p
+      font-size: 18px
+      font-weight: 300
+      @include maxTablet
+        font-size: 15px
+      strong
+        font-weight: 600
+        color: var(--strongpink)

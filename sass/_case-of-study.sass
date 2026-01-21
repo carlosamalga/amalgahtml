@@ -1,0 +1,163 @@
+@use './variables' as *
+
+.caseofstudy
+  background-color: var(--primary-color)
+  padding: 60px 0
+  @include maxTablet
+    padding: 40px 0
+  &-head
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    @include maxTablet
+      display: block
+    h2, h3, p
+      color: white
+  &-titles
+    width: 100%
+    max-width: 530px
+    padding-bottom: 5px
+    @include maxTablet
+      padding-bottom: 15px
+    .intro
+      padding-bottom: 10px
+      h3
+        color: var(--lightblue)
+    h2
+      font-weight: 600
+    h3
+      font-size: 20px
+      font-weight: 500
+      text-transform: uppercase
+      letter-spacing: 0.06em
+  &-description
+    width: 100%
+    max-width: 600px
+    display: flex
+    align-items: flex-start
+    p
+      font-size: 26px
+      font-weight: 600
+      line-height: 26px
+      color: var(--white)
+      font-weight: 500
+      line-height: 1.5
+      padding-left: 15px
+      @include maxTablet
+        font-size: 20px
+  &-items
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 50px 0
+    gap: 15px
+    @include maxTablet
+      padding: 30px 0
+      justify-content: center
+  &-card
+    width: 32%
+    max-width: 405px
+    background-color: var(--white)
+    padding: 50px 25px
+    border: 1px solid var(--border-input-color-graygreen)
+    border-radius: 30px
+    @include maxTablet
+      padding: 25px
+    @include phabletToTablet
+      width: 45%
+    @include maxPhablet
+      width: 100%
+    .card-title
+      color: var(--primary-color)
+      font-weight: 600
+      font-size: 22px
+      padding-bottom: 20px
+      display: flex
+      align-items: center
+      gap: 15px
+      span
+        display: block
+        color: inherit
+        font-size: inherit
+        font-weight: inherit
+    .card-description
+      font-size: 15px
+      font-weight: 300
+      ul
+        padding-left: 0px
+        li
+          position: relative
+          margin-block: 15px
+          &:last-child
+            margin-bottom: 0
+          span
+            display: block
+            line-height: 1.75
+            padding-left: 45px
+      &-results
+        &-el
+          padding: 15px 0
+          border-bottom: 1px solid var(--primary-color)
+          &:last-child
+            border-bottom: 0
+          h4
+            font-weight: 400
+            font-size: 16px
+            text-transform: uppercase
+            line-height: 1
+          p
+            font-size: 30px
+            font-weight: 600
+            padding-top: 10px
+            line-height: 1
+            span
+              color: var(--primary-color)
+              font-weight: inherit
+    &.the-challenge
+      .card-title
+        color: var(--redghost)
+      ul li
+        &::before
+          content: ""
+          position: absolute
+          left: 0
+          top: -2px
+          background-image: url('../images/li-cross.svg') 
+          background-position: center center
+          background-repeat: no-repeat
+          background-size: 100%
+          width: 26px
+          height: 26px
+
+    &.the-solution
+      .card-title
+        color: var(--greenghost)      
+      ul li
+        &::before
+          content: ""
+          position: absolute
+          left: 0
+          top: 0
+          background-image: url('../images/li-check.svg') 
+          background-position: center center
+          background-repeat: no-repeat
+          background-size: 100%
+          width: 30px
+          height: 26px
+
+    &.the-results
+      padding-left: 50px
+      padding-right: 50px
+      @include maxTablet
+        padding-left: 30px
+        padding-right: 30px        
+
+  &-disclaimer
+    text-align: center
+    p
+      font-size: 14px
+      font-weight: 300
+      font-style: italic
+      color: var(--white)
+      @include maxTablet
+        font-size: 12px

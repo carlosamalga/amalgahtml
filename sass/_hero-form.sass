@@ -1,0 +1,56 @@
+@use './variables' as *
+
+.hero-banner-form
+  display: block
+  width: 100%
+  max-width: 420px
+  margin: 0 auto
+  @include maxTablet
+    padding-bottom: 20px
+  &-head
+    background-color: var(--primary-color)
+    text-align: center
+    padding: 15px
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    h3, p
+      color: var(--white)
+    h3
+      font-size: 18px
+      margin-bottom: 5px
+      @include maxMobile
+        font-size: 16px
+    p
+      font-weight: 500
+      @include maxMobile
+        font-size: 13px
+  &-body
+    background-color: var(--white)
+    padding: 30px
+    border-bottom-left-radius: 5px
+    border-bottom-right-radius: 5px    
+    @include maxMobile
+      padding: 20px
+    .hs-form
+      .hs-input,
+      label
+        font-size: 13px
+      .hs-input
+        margin-top: 5px
+      .hs-form-field
+        margin-bottom: 15px
+      .hs-form-booleancheckbox
+        label
+          font-size: 12px
+          a
+            color: var(--primary-color)
+            font-weight: 600
+      .hs-button
+        width: 100%
+        border-radius: 5px
+        height: 40px
+        background-color: var(--primary-color)
+        color: var(--white)
+        border: 0
+        font-size: 15px
+        font-weight: 600
