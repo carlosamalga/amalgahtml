@@ -3,10 +3,65 @@
 .services-block
   background-color: var(--secondary-color)
   @include recursivePaddingHeight
+
+  .title-section
+    padding-bottom: 0
+
   &-grid
     @include flexCenter
     flex-wrap: wrap
     gap: 15px
     @include maxTablet
       align-items: unset
+    &.with-pills
+      width: 100%
+      max-width: 930px
+      margin: 0 auto
+    &.simple-boxes
+      .block-and-cards-item
+        width: 100%
+        max-width: 200px
+        height: 70px
+        padding: 15px 20px
+        @include maxMobile
+          width: 45%
+          height: auto
+        .block-and-cards-copys
+          width: 100%
+          padding: 0
+          .card-title
+            font-size: 14px
+            font-weight: 500
+            @include maxMobile
+              font-size: 13px
+
+  &-pills
+    width: 100%
+    max-width: 310px
+    margin: 70px auto 50px
+    padding: 5px
+    background-color: var(--secondary-color-15)
+    gap: 0 5px
+    @include flexCenter
+    border-radius: 100px
+    button
+      border: 0
+      border-radius: 100px
+      display: block
+      width: 100%
+      @include flexCenter
+      height: 45px
+      color: var(--primary-color)
+      font-weight: 600
+      &.active
+        color: var(--white)
+        background-color: var(--primary-color)
+
+  &-pillitem
+    display: none
+    &.active
+      display: block
   
+  // themes
+  &.theme-primary
+    background-color: var(--primary-color)

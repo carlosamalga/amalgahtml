@@ -102,3 +102,77 @@
           border-radius: 20px
           @include maxMobile
             padding: 40px 25px
+
+
+  &.theme-herobanner
+    height: auto
+    max-height: unset
+    min-height: 0
+    padding: 100px 0
+    @include phabletToTablet
+      padding: 60px 0
+    @include maxMobile
+      padding: 50px 0
+    h1, p
+      @include maxTabletPortrait
+        text-align: center
+    h1
+      background: linear-gradient(90deg, #FFFFFF 0%, #BEFCFF 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-clip: text
+      text-fill-color: transparent
+      padding: 20px 0
+      @include tabletPortraitTo1280
+        font-size: 36px
+    p
+      font-weight: 300
+      @include minDesktop1280
+        font-size: 18px
+    .theme-top-hero
+      margin-top: 0!important
+      @include maxTabletPortrait
+        justify-content: center!important
+      .pill-badge
+        background: linear-gradient(90deg, #FFFFFF 0%, #BEFCFF 100%)
+        padding: 6px 12px
+      .pill-badge-description
+        width: 100%
+        span
+          color: var(--primary-color)
+          font-size: 12px
+          font-weight: 600
+          text-transform: uppercase
+    .pageservice-banner-text
+      max-width: 675px
+      @include maxTabletPortrait
+        margin: 0 auto
+    .calltoaction-btns-grid
+      padding: 30px 0
+      margin-bottom: 30px
+      border-bottom: 1px solid rgba(255,255,255,0.5)
+      @include maxTabletPortrait
+        justify-content: center!important
+
+    .pageservice-banner-pillsgrid
+      margin-top: 50px
+      flex-wrap: nowrap
+      @include maxMobile
+        flex-wrap: wrap
+    .pill-badge
+      @include maxMobile
+        width: 100%
+        max-width: 200px
+      @include maxMobileLandscape
+        max-width: 150px
+    .pill-badge-icon
+      img
+        width: 34px
+    .pill-badge-description
+      width: calc( 100% - 45px)
+      span
+        line-height: 1.25
+        display: block
+
+
+        

@@ -17,6 +17,7 @@
 @use '_testimonials.sass' as *;
 @use '_variables.sass' as *;
 @use '_why-amalga.sass' as *;
+@use '_asfeatured.sass' as *;
 
 
 // homepage
@@ -126,4 +127,76 @@ span{
 
 .bg-red{
   background-color: var(--primary-color);
+}
+
+
+
+.article-circle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+.asfeatured-item{
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	text-align: center;
+	cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  background-position: center center;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  background-size: 80%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  &:hover{
+    .article-viewmore{
+      opacity: 1;
+      box-shadow: 
+        inset 0 0 0 var(--white), 
+        inset 0 0 0 transparent, 
+        inset 0 0 0 transparent, 
+        inset 0 0 0 transparent, 
+        0 0 20px silver;   
+        background-color: var(--white);
+    }
+  }
+  .article-viewmore{
+    opacity: 0;
+    --itemWidth: 150px;
+    --itemWidthMinus: calc(-1 * var(--itemWidth));	
+    box-shadow: 
+      inset var(--itemWidthMinus) var(--itemWidthMinus) 0 var(--secondary-color), 
+      inset var(--itemWidth) var(--itemWidthMinus) 0 var(--primary-color), 
+      inset var(--itemWidthMinus) var(--itemWidth) 0 var(--lightblue), 
+      inset var(--itemWidth) var(--itemWidth) 0 var(--greenghost), 
+      0 0 20px silver;
+    transition: all ease-in-out .5s, background-color ease-in-out .1s;	
+    width: var(--itemWidth);
+    height: var(--itemWidth);
+    border-radius: 50%;  
+    user-select: none; -moz-user-select: none; -webkit-user-select: none;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    margin: 0 auto;
+    gap: 10px ;
+    text-decoration: none;
+    line-height: 1.25;     
+    padding: 0 15px;
+    position: relative;
+    img{
+      width: 100%;
+      max-width: 12px;
+    }
+  }
 }
