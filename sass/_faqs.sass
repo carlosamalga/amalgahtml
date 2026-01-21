@@ -60,7 +60,7 @@
     border-radius: 0
     color: var(--white)
     position: relative
-    &:after
+    &::after
       --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e")
       --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e")
       margin-top: 5px
@@ -83,3 +83,26 @@
       color: var(--white)
       .category
         display: none
+
+
+  // themes 
+  &.theme-primarywhite
+    background: linear-gradient(180deg, #F1F5F9 80%, #FFFFFF 100%)
+    padding: 70px 0 140px
+    @include maxMobile
+      padding: 50px 0 
+    h2, h3
+      color: var(--primary-color)
+    .faqsByArea--item
+      border-bottom: 1px solid var(--secondary-color)!important
+    .faqsByArea--body .category
+      color: var(--secondary-color)
+      border-color: var(--secondary-color)
+    .faqsByArea--btn .category,
+    .faqsByArea--body p,
+    .faqsByArea--btn
+      color: var(--primary-color)
+    .faqsByArea--btn
+      &::after
+        --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23006E75' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e")
+        --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23006E75' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e")

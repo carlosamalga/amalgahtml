@@ -3,6 +3,13 @@
 .calltoaction
   padding: 30px 0
 
+  &.lg-hg
+    padding: 80px 0
+    .calltoaction-cta
+      min-height: 360px 
+      @include flexCenter
+      flex-flow: column
+
   .title-section
     padding: 0
 
@@ -30,7 +37,7 @@
   // themes
   &.cta-primary-theme
     .calltoaction-cta
-      background: linear-gradient(93.6deg, #006E75 35.02%, rgba(1, 110, 117, 0.7) 100%)
+      background: linear-gradient(93.6deg, #006E75 35.02%, #3EA2A9 82.7%)
     .title-section
       h3, h2, p
         color: var(--white)

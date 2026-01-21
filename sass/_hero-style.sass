@@ -75,3 +75,30 @@
       margin: 25px 0
       @media (min-width: 992px)
         font-size: 18px
+    .calltoaction-btns-grid
+      @include maxTablet
+        justify-content: center!important
+    .intro-title
+      @include flexCenter
+      gap: 15px
+      @include maxTablet
+        flex-flow: column
+      img
+        @include maxTablet
+          display: none
+  &.theme-justform
+    height: auto
+    min-height: 0
+    max-height: unset
+    padding: 40px 0 100px
+    @include maxMobile
+      padding: 50px 0 20px
+    .hero-banner
+      &-form
+        width: 100%
+        max-width: 500px
+        &-body
+          background-color: var(--secondary-color-33)
+          border-radius: 20px
+          @include maxMobile
+            padding: 40px 25px
