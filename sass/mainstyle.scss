@@ -21,6 +21,12 @@
 @use '_block-whynearshore.sass' as *;
 @use '_datanumbers.sass' as *;
 
+// BPO
+@use 'bpo/_advantages.sass' as *;
+@use 'bpo/_results.sass' as *;
+@use 'bpo/_integrations.sass' as *;
+@use 'bpo/_featured.sass' as *;
+
 
 // homepage
 @use 'homepage/_block-intro.sass' as *;
@@ -116,6 +122,11 @@ span{
     border-color: var(--lightblue);
     color: var(--primary-color);
   }
+  &.btn-transparent-cta{
+    background-color: transparent;
+    border-color: var(--lightblue);
+    color: var(--lightblue);
+  }  
   &.btn-lightblue-outline{
     background-color: transparent;
     border-color: var(--lightblue);

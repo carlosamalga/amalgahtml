@@ -1,0 +1,109 @@
+.results
+    background-color: var(--primary-color)
+    padding: 80px 0
+    &-title
+        color: white
+        margin: 0 0 50px
+        text-align: center
+        h3
+            font-size: 18px
+            font-weight: 500
+            margin: 0 0 20px
+        h2
+            font-size: 32px
+            font-weight: 600
+            margin: 0 0 20px
+        p
+            font-size: 16px
+    &-content
+        a
+            height: 48px
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 50px
+            background-color: var(--lightblue)
+            color: var(--primary-color) !important
+            max-width: 250px
+            font-weight: 600
+            width: 100%
+            text-decoration: none
+            margin: 50px auto 0
+            img
+                margin-left: 10px
+        &-item
+            &-inner
+                background-color: white
+                border-radius: 20px
+                &-img
+                    border-radius: 20px 20px 0 0
+                    background-color: var(--border-input-color)
+                    height: 220px
+                    overflow: hidden
+                    img
+                        display: block
+                        max-width: 100%
+                        border-radius: 20px 20px 0 0
+                &-title
+                    padding: 20px
+                    display: flex
+                    justify-content: flex-start
+                    position: relative
+                    &::after
+                        content: ''
+                        width: 90%
+                        background-color: var(--lightgray)
+                        opacity: .3
+                        height: 1px
+                        position: absolute
+                        left: 50%
+                        transform: translateX(-50%)
+                        bottom: 0
+                    &-block
+                        &:first-child
+                            margin-right: 20px
+                            p
+                                span
+                                    color: var(--secondary-color)
+                        p
+                            span
+                                font-weight: 600
+                                font-size: 32px
+                            &:last-child
+                                margin: 0
+                                font-size: 15px
+                                color: var(--lightgray)
+                &-text
+                    padding: 20px
+                    h4
+                        font-size: 18px
+                        color: var(--secondary-color)
+                        margin: 0 0 15px
+                        line-height: 150%
+                    p
+                        font-size: 16px
+                        margin: 0 0 35px
+                        min-height: 72px
+                    a
+                        height: 48px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        border-radius: 50px
+                        background-color: var(--primary-color)
+                        color: white !important
+                        max-width: 200px
+                        font-weight: 600
+                        width: 100%
+                        text-decoration: none
+
+@media (max-width: 767px)
+    .results
+        &-content
+            .row
+                .col-4
+                    width: 100%
+                    max-width: 100%
+                    margin: 0 0 30px
+                    &:last-child
+                        margin: 0

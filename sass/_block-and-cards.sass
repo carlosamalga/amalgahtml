@@ -2,6 +2,17 @@
 
 .block-and-cards
   padding: 0 0 100px
+  &.block-and-cards-bpo
+    .block-and-cards-copys .card-title
+      font-size: 17px
+    .block-and-cards-copys .card-description
+      margin: 0 0 10px
+      &:nth-child(3)
+        margin: 0
+    .block-and-cards-item
+      max-width: 400px
+      .block-and-cards-copys
+        min-height: 225.5px  
   @media (max-width: 767px)
     padding: 0 0 70px
   &-grid
@@ -129,7 +140,32 @@
     a
       color: var(--primary-color-55)
 
-  // thems
+  .card-button
+    display: inline-block
+    margin: 25px 0 0
+    color: var(--aqua-fosfo)
+    text-decoration: none
+    font-size: 14px
+
+  // themes
+  &.theme-secondary
+    background-color: var(--secondary-color)
+    .title-section
+      h3
+        color: var(--lightblue)
+      h2, p
+        color: var(--white)
+    .block-and-cards-item
+      display: flex
+      flex-flow: column
+      align-items: flex-start
+      justify-content: space-between     
+      padding: 20px 
+    .block-and-cards-copys
+      min-height: 0!important
+    .block-and-cards-icon
+      background-color: transparent
+      margin-bottom: 20px
   &.theme-lightblue-center
     .block-and-cards-icon
       margin-left: auto
