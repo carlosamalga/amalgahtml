@@ -1,0 +1,80 @@
+@use './variables' as *
+.datanumbers
+  &-section
+    padding: 0px 0 80px
+    background-color: var(--softgray)
+    @include maxTablet
+      padding: 0 0 40px
+    .container
+      border-top: 1px solid var(--secondary-color-33)
+      padding-top: 80px
+      @include maxTablet
+        padding-top: 40px
+  
+  &-items
+    @include flexCenter
+    flex-wrap: wrap
+    gap: 30px 
+    @include maxTablet
+      padding: 30px 0 0
+      gap: 20px
+  &-item
+    text-align: center
+    width: 45%
+    max-width: 220px
+    @include maxMobile
+      width: 100%
+    .decoration
+      display: block
+      min-width: 30px
+      img
+        display: block
+        max-width: 100%
+    p
+      color: var(--primary-color)
+      font-size: 18px
+      @include maxTablet
+        font-size: 15px
+      &.insight
+        font-weight: bold
+        @include flexCenter
+        gap: 15px
+        .copy
+          font-weight: 600
+          line-height: 1.25
+          display: block
+          text-align: left
+    .digit
+      font-size: 50px
+      @include maxTablet
+        font-size: 35px
+    
+    &.featured
+      background-color: var(--white)
+      box-shadow: 0px 0px 10px rgba(0, 110, 117, 0.2)
+      padding: 40px
+      width: 100%
+      max-width: 630px
+      border-radius: 20px
+      margin: 0 auto 15px
+      @include maxMobile
+        padding: 20px
+      .insight
+        gap: 30px
+        @include maxMobile
+          gap: 15px
+      .digit
+        font-size: 80px
+        @include maxMobile
+          font-size: 40px
+      p
+        font-size: 22px
+        @include maxMobile
+          font-size: 17px
+      .text
+        font-weight: 600
+        width: 100%
+        max-width: 270px
+        margin: 10px auto 0
+        @include maxMobile
+          font-size: 15px

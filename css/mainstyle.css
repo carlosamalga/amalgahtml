@@ -1549,6 +1549,8 @@ textarea {
   border-radius: 100px;
 }
 .services-block-pills button {
+  background: transparent;
+  background-color: transparent;
   border: 0;
   border-radius: 100px;
   display: block;
@@ -1787,13 +1789,201 @@ textarea {
 }
 
 .asfeatured {
-  padding: 80px 0;
+  padding: 80px 0 40px;
   background-color: var(--softgray);
 }
 .asfeatured h2 {
   color: var(--primary-color);
   font-weight: 600;
   padding-bottom: 70px;
+}
+
+.block-whynearshore {
+  background-color: var(--white);
+  padding: 100px 0;
+}
+@media (max-width: 568px) {
+  .block-whynearshore {
+    padding: 50px 0;
+  }
+}
+.block-whynearshore-title {
+  padding-bottom: 50px;
+}
+.block-whynearshore-title h3, .block-whynearshore-title h2 {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.block-whynearshore-title h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.block-whynearshore-item {
+  padding-bottom: 30px;
+}
+.block-whynearshore-item img {
+  display: block;
+}
+@media (min-width: 979px) {
+  .block-whynearshore-item img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 568px) {
+  .block-whynearshore-item img {
+    margin-bottom: 20px;
+  }
+}
+.block-whynearshore-item p {
+  font-size: 15px;
+}
+.block-whynearshore-item p strong {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.block-whynearshore-featuredcopy {
+  padding: 20px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.75;
+  box-shadow: 0px 0px 20px rgba(62, 162, 169, 0.5);
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+.datanumbers-section {
+  padding: 0px 0 80px;
+  background-color: var(--softgray);
+}
+@media (max-width: 768px) {
+  .datanumbers-section {
+    padding: 0 0 40px;
+  }
+}
+.datanumbers-section .container {
+  border-top: 1px solid var(--secondary-color-33);
+  padding-top: 80px;
+}
+@media (max-width: 768px) {
+  .datanumbers-section .container {
+    padding-top: 40px;
+  }
+}
+.datanumbers-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .datanumbers-items {
+    padding: 30px 0 0;
+    gap: 20px;
+  }
+}
+.datanumbers-item {
+  text-align: center;
+  width: 45%;
+  max-width: 220px;
+}
+@media (max-width: 568px) {
+  .datanumbers-item {
+    width: 100%;
+  }
+}
+.datanumbers-item .decoration {
+  display: block;
+  min-width: 30px;
+}
+.datanumbers-item .decoration img {
+  display: block;
+  max-width: 100%;
+}
+.datanumbers-item p {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .datanumbers-item p {
+    font-size: 15px;
+  }
+}
+.datanumbers-item p.insight {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.datanumbers-item p.insight .copy {
+  font-weight: 600;
+  line-height: 1.25;
+  display: block;
+  text-align: left;
+}
+.datanumbers-item .digit {
+  font-size: 50px;
+}
+@media (max-width: 768px) {
+  .datanumbers-item .digit {
+    font-size: 35px;
+  }
+}
+.datanumbers-item.featured {
+  background-color: var(--white);
+  box-shadow: 0px 0px 10px rgba(0, 110, 117, 0.2);
+  padding: 40px;
+  width: 100%;
+  max-width: 630px;
+  border-radius: 20px;
+  margin: 0 auto 15px;
+}
+@media (max-width: 568px) {
+  .datanumbers-item.featured {
+    padding: 20px;
+  }
+}
+.datanumbers-item.featured .insight {
+  gap: 30px;
+}
+@media (max-width: 568px) {
+  .datanumbers-item.featured .insight {
+    gap: 15px;
+  }
+}
+.datanumbers-item.featured .digit {
+  font-size: 80px;
+}
+@media (max-width: 568px) {
+  .datanumbers-item.featured .digit {
+    font-size: 40px;
+  }
+}
+.datanumbers-item.featured p {
+  font-size: 22px;
+}
+@media (max-width: 568px) {
+  .datanumbers-item.featured p {
+    font-size: 17px;
+  }
+}
+.datanumbers-item.featured .text {
+  font-weight: 600;
+  width: 100%;
+  max-width: 270px;
+  margin: 10px auto 0;
+}
+@media (max-width: 568px) {
+  .datanumbers-item.featured .text {
+    font-size: 15px;
+  }
 }
 
 body,
