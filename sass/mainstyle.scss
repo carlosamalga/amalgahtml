@@ -27,6 +27,8 @@
 @use 'bpo/_integrations.sass' as *;
 @use 'bpo/_featured.sass' as *;
 
+// about us
+@use 'about-us/_team.sass' as *;
 
 // homepage
 @use 'homepage/_block-intro.sass' as *;
