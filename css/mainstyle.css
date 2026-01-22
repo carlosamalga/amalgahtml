@@ -1171,7 +1171,7 @@ textarea {
   height: auto;
   max-height: unset;
   min-height: 0;
-  padding: 100px 0;
+  padding: 130px 0;
 }
 @media (min-width: 740px) and (max-width: 992px) {
   .pageservice-banner.theme-herobanner {
@@ -1819,6 +1819,9 @@ textarea {
   text-transform: uppercase;
   margin-bottom: 5px;
 }
+.block-whynearshore-title p {
+  margin: 25px 0;
+}
 .block-whynearshore-item {
   padding-bottom: 30px;
 }
@@ -1855,6 +1858,84 @@ textarea {
   box-shadow: 0px 0px 20px rgba(62, 162, 169, 0.5);
   border-radius: 5px;
   margin-top: 25px;
+}
+.block-whynearshore-timeline {
+  position: relative;
+}
+.block-whynearshore-timeline .num-step {
+  position: relative;
+}
+.block-whynearshore-timeline .num-step.lastnum::before {
+  display: none;
+}
+.block-whynearshore-timeline .num-step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 140px;
+  background-color: white;
+}
+@media (max-width: 767px) {
+  .block-whynearshore-timeline .num-step::before {
+    display: none;
+  }
+}
+.block-whynearshore-timeline img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .block-whynearshore-timeline img {
+    margin: 0 0 20px;
+  }
+}
+.block-whynearshore.theme-timeline {
+  background-color: var(--secondary-color);
+}
+.block-whynearshore.theme-timeline .block-whynearshore-item,
+.block-whynearshore.theme-timeline .block-whynearshore-data {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .block-whynearshore.theme-timeline .block-whynearshore-data {
+    margin-top: 50px;
+  }
+}
+.block-whynearshore.theme-timeline .block-whynearshore-title {
+  padding-bottom: 0;
+}
+.block-whynearshore.theme-timeline .block-whynearshore-title h3 {
+  color: var(--lightblue);
+}
+.block-whynearshore.theme-timeline .block-whynearshore-title h3, .block-whynearshore.theme-timeline .block-whynearshore-title p {
+  font-weight: 400;
+}
+.block-whynearshore.theme-timeline .block-whynearshore-title h2, .block-whynearshore.theme-timeline .block-whynearshore-title p {
+  color: var(--white);
+}
+.block-whynearshore.theme-timeline .block-whynearshore-featuredcopy {
+  border-top: 1px solid var(--primary-color);
+  border-radius: 0;
+  margin-top: 45px;
+  padding: 30px 0 0;
+  font-size: 16px;
+  color: var(--lightblue);
+}
+.block-whynearshore.theme-timeline .block-whynearshore-item p {
+  color: var(--white);
+  font-weight: 300;
+  font-size: 16px;
+}
+.block-whynearshore.theme-timeline .block-whynearshore-item p strong {
+  font-weight: 600;
+  display: block;
+  font-size: 20px;
 }
 
 .datanumbers-section {
